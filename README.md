@@ -47,3 +47,8 @@ For quick reference added few screenshots of desktop and mobile inside screensho
 
 ### Test Cases
 Included jest for the test cases but most of the unit level functions are dependable on DOM directly, not able to add more real test cases....
+
+### Enhancements/Improvements
+a) Instead of localstorage, we can save/get data to/from database so the user can see data on various device.
+2) Inline update of prority field as well.
+3) Along with delete and update, complete/done action on each todo item.
