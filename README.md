@@ -24,11 +24,11 @@ Two sections
 ### Package Details
 1) Webpack   --- For building the application.
 
-2) Javascript --- Es6 used for the scripting part.
+2) Javacript --- Es6 used for the scripting part.
 
 3) SCSS --- For styling the application.
 
-4) Loaders --- For loading the scss files and script files into the index.html on final build
+4) Loaders --- For compiling and loading the scss files and script files
 
 ###  To run the Application
 
@@ -43,4 +43,7 @@ The page will reload if you make edits.<br />
 You will also see errors in the console if any.
 
 ### Screenshots
-For quick referencez added few screenshots of desktop and mobile inside screenshots folder
+For quick reference added few screenshots of desktop and mobile inside screenshots folder
+
+### Test Cases
+Included jest for the test cases but most of the unit level functions are dependable on DOM directly, not able to add more real test cases....

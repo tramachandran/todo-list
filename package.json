@@ -4,7 +4,7 @@
   "description": "Create a list of tasks to do with priority assigned.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "webpack-dev-server --mode=development --open"
   },
   "author": "Ramachandran T",
@@ -21,6 +21,7 @@
     "css-loader": "^3.6.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "jest": "^26.1.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",

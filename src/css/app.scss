@@ -55,6 +55,7 @@ html {
                 button {
                     height: 3vh;
                     vertical-align: middle;
+                    cursor: pointer;
                 }
             }
         }
@@ -72,6 +73,7 @@ html {
             padding: 0.25rem 0.5rem;
             background-color: white;
             visibility: hidden;
+            overflow: auto;
             ul.todo-list {
                 list-style: none;
                 padding: 0.25rem 0;
