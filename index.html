@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Todo List</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>My To-do List</h1>
+    </div>
+    <div class="new-task-container">
+      <div>
+        <select id="task-priority" class="task-priority">
+          <option value="p0" selected>Critical</option>
+          <option value="p1">High</option>
+          <option value="p2">Medium</option>
+          <option value="p3">Low</option>
+        </select>
+      </div>
+      <div>
+        <input type="text" id="task-name" class="task-input" placeholder="Task Name">
+      </div>
+      <div>
+        <button type="button" id="add-btn" class="btn add-btn">
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+    </div>
+    <div class="todo-list-container">
+      <div class="delete-all">
+        <button id="deleteSelected" class="btn" title="Delete selected">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+      <ul class="todo-list">
+      </ul>
+    </div>
+  </div>
+  <script src="/bundle.js"></script>
+</body>
+
+</html>

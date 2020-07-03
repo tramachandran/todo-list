@@ -1,0 +1,177 @@
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/fa-solid.scss";
+@import "./variables.scss";
+
+html {
+    box-sizing: border-box;
+    *,
+    *::after,
+    *::before {
+        box-sizing: inherit;
+    }
+    body {
+        padding: 0;
+        margin: 0;
+        min-height: 100vh;
+        background-image: linear-gradient(to bottom, $bg-start-color, $bg-end-color);
+        color: $text-color;
+        font-family: sans-serif;
+    }
+    div.container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        .header {
+            margin-bottom: 2rem;
+            flex: 0.5;
+        }
+        .new-task-container {
+            flex: 0.5;
+            max-width: 90vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            padding: 0.25rem 1rem;
+            div {
+                margin-right: 1.25rem;
+                input {
+                    border: none;
+                    border-bottom: 1px solid rgb(59, 150, 150);
+                    &:focus {
+                        outline: none;
+                        border-bottom: 3px solid rgb(98, 81, 194);
+                    }
+                }
+                select {
+                    border: none;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                }
+                button {
+                    height: 3vh;
+                    vertical-align: middle;
+                }
+            }
+        }
+        input,
+        select,
+        button {
+            &:focus {
+                outline: none;
+            }
+        }
+        .todo-list-container {
+            max-width: 90vw;
+            flex: 4;
+            margin: 1rem 0;
+            padding: 0.25rem 0.5rem;
+            background-color: white;
+            visibility: hidden;
+            ul.todo-list {
+                list-style: none;
+                padding: 0.25rem 0;
+                margin: 0;
+                .todo-item {
+                    margin: 0.5rem;
+                    padding: 0.5rem;
+                    &.p0 {
+                        background-color: $bg-critical-color;
+                    }
+                    &.p1 {
+                        background-color: $bg-high-color;
+                    }
+                    &.p2 {
+                        background-color: $bg-medium-color;
+                    }
+                    &.p3 {
+                        background-color: $bg-low-color;
+                    }
+                    &.disable {
+                        div.btn-save {
+                            display: inline-block;
+                        }
+                        div.btn-delete {
+                            display: none;
+                        }
+                    }
+                    &.selected {
+                        font-size: 1.2rem;
+                        transform: scale(1.05);
+                    }
+                    li {
+                        display: flex;
+                        div {
+                            margin-right: 1.5rem;
+                            input {
+                                border: none;
+                                background-color: transparent;
+                                color: $text-color;
+                                border-bottom: 1px solid $text-color;
+                                &:focus {
+                                    outline: none;
+                                    font-weight: bold;
+                                    border-bottom: 3px solid $text-color;
+                                }
+                                &:disabled {
+                                    border: none;
+                                    cursor: pointer;
+                                }
+                            }
+                            &.btn-save {
+                                display: none;
+                                button {
+                                    background-color: green;
+                                    color: $text-color;
+                                    cursor: pointer;
+                                }
+                            }
+                            &.btn-delete {
+                                display: inline-block;
+                                button {
+                                    background-color: $text-color;
+                                    color: red;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .delete-all {
+                visibility: hidden;
+                button {
+                    background-color: red;
+                    color: $text-color;
+                    cursor: pointer;
+                }
+            }
+            .delete-all.show {
+                visibility: visible;
+            }
+            &.show {
+                visibility: visible;
+            }
+        }
+        .fa-trash,
+        .fa-plus,
+        .fa-times,
+        .fa-check {
+            pointer-events: none;
+        }
+        @media screen and (max-width: 800px) {
+            .new-task-container {
+                div {
+                    margin-right: 1rem;
+                    select {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
