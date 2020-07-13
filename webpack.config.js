@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
-const CompressionPlugin = require('compression-webpack-plugin');
+// const CompressionPlugin = require('compression-webpack-plugin');
 module.exports = {
     entry: {
         main: './src/index.js'
@@ -50,10 +50,7 @@ module.exports = {
             template: './index.html',
             filename: 'index.html'
         }),
-        new WebpackMd5Hash(),
-        new CompressionPlugin({
-            algorithm: 'gzip'
-        })
+        new WebpackMd5Hash()
     ],
     devServer: {
         contentBase: 'dist',
